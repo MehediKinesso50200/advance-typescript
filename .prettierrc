@@ -1,0 +1,16 @@
+{
+  "arrowParens": "always",
+  "semi": true,
+  "trailingComma": "none",
+  "singleQuote": true,
+  "printWidth": 120,
+  "bracketSpacing": false,
+  "overrides": [
+    {
+      "files": "*.html, .scss, .json",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
