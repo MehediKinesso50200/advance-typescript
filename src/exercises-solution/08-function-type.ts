@@ -1,6 +1,4 @@
-export {}
 //--- Awaited
-
 function getUsers(): Promise<{firstName: string; lastName: string; id: number; dob: string}> {
   return Promise.resolve({firstName: '', lastName: '', id: 2, dob: '123'});
 }

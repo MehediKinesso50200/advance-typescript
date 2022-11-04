@@ -1,6 +1,8 @@
 export {}
 /// Partial Required Readonly
 
+// OrderResponse
+
 interface House {
     address: string
     price: number
@@ -13,6 +15,7 @@ interface House {
 //     type?: "bunglow" | "condo" | "terrace" | undefined;
 // }
 type partial_houses = Partial<House>
+const p_house: partial_houses = { address: 'address, a/a, cc road'}
 
 
 // type ReadOnlyHouses = {

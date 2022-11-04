@@ -35,3 +35,7 @@ export type UnionToIntersection<U> = (
 ) extends (k: infer I) => void
   ? I
   : never;
+
+  export function httpRequest(dataTyle: string, paramType: any): any{
+    return;
+  }
