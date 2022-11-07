@@ -5,33 +5,28 @@ interface OrderInformation {
   shipmentPartner: 'LAZ' | 'POS' | 'LALA';
 }
 
-const orderInfo: OrderInformation = {id: 2233, shipmentPartner: 'LAZ'};
 type OrderDerivativeId = `${OrderInformation['id']}-${OrderInformation['shipmentPartner']}`;
-
-createOrderCombinedId(orderInfo);
-
-function createOrderCombinedId(orderInfo: OrderInformation): OrderDerivativeId {
-  return (orderInfo.id + '-' + orderInfo.shipmentPartner) as OrderDerivativeId;
-}
-
-const orderDerivativeId: OrderDerivativeId = '2-LAZ';
+const orderInfo: OrderInformation = {id: 2233, shipmentPartner: 'LAZ'};
+const orderDerivativeId: OrderDerivativeId = '2-XYZ';
 
 getOrderOrderInfo(orderDerivativeId);
 
 function getOrderOrderInfo(combinedId: OrderDerivativeId): OrderInformation {
   const getArrayCombinedArray = combinedId.split('-');
-
+  
   const data = {
     id: Number(getArrayCombinedArray[0]),
     shipmentPartner: getArrayCombinedArray[1] as OrderInformation['shipmentPartner']
   };
-
+  
   return data;
 }
+
 
 type ipgdomain = 'kinesso' | 'matterkind' | 'ipg';
 type kinessoEmail = `${string}@${ipgdomain}.com`;
 const email: kinessoEmail = `abc@yahoo.com`;
+
 
 // type year = number;
 // type month = 'Jan' | 'Mar' | 'Apr';

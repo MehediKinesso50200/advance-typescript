@@ -1,9 +1,9 @@
 import {OrderDetails} from './02-omit';
 
 // orderStatus: 'packed' | 'shipped' | 'delivered' | 'cancelled';
-const orderItem: Partial<OrderDetails> = {
+const orderItem: OrderDetails = {
   id: 123,
-  // orderStatus: 'packed',
+  orderStatus: 'packed',
   shippingAddress: 'string',
   quantity: 1,
   userDetails: {
@@ -20,11 +20,14 @@ const orderItem: Partial<OrderDetails> = {
       color: '#000',
       size: 'sm'
     }
-  }
+  },
+  orderDate: new Date()
 };
 
+getOrderStatus(orderItem);
+
 export function getOrderStatus(orderItem: OrderDetails): OrderDetails['orderStatus'] {
-  //TODO call qurior api to check status;
+  //TODO call courier api to check status;
   return 'packed';
 }
 

@@ -21,3 +21,5 @@ export async function createDraftProduct(product: Product) {
   const postDraftProduct = httpRequest('postDraftProduct', {product});
   return postDraftProduct;
 }
+
+// nested type will not be partial

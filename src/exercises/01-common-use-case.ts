@@ -6,7 +6,7 @@ export async function getProductList() {
 }
 
 export async function getUserList() {
-  const apiResponse: UserResponse = httpRequest('productList', {});
+  const apiResponse: UserResponse = httpRequest('userList', {});
   return apiResponse;
 }
 
@@ -21,11 +21,12 @@ export interface ProductResponse {
     inventory: number;
     price: number;
     details: {
-      size: string; // format with type
-      color: string; // format with type
+      size: string; 
+      color: string;
     };
   }[];
 }
+
 export interface UserResponse {
   status: string;
   message: string;

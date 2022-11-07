@@ -9,10 +9,7 @@ type user = Awaited<ReturnType<typeof getUsers>>;
 type firstNameType = Awaited<ReturnType<typeof getUsers>>['firstName']; // same as user['firstName]
 
 
-
-
 //---- Parameters
-
 function toDate(
   year: number,
   month: 'Jan' | 'Feb' | 'Mar' | 'December',

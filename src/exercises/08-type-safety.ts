@@ -19,6 +19,5 @@ export function processOrder(order: Order) {
     order.email;
     order.card;
   }
-
   return order;
 }

@@ -17,7 +17,7 @@ const draftProduct: Partial<Product> = {
 
 createDraftProduct(draftProduct);
 
-export async function createDraftProduct(product: Partial<Product>) {
+function createDraftProduct(product: Partial<Product>) {
   const postDraftProduct = httpRequest('postDraftProduct', {product});
   return postDraftProduct;
 }
