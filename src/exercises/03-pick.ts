@@ -24,13 +24,6 @@ const orderItem: OrderDetails = {
   orderDate: new Date()
 };
 
-getOrderStatus(orderItem);
-
-export function getOrderStatus(orderItem: OrderDetails): 'packed' | 'shipped' | 'delivered' | 'cancelled' {
-  return 'packed';
-}
-
-
 getOrderDetails(orderItem);
 // Only need to get below attributes
 export function getOrderDetails(orderItem: OrderDetails): OrderDetails {
@@ -38,6 +31,12 @@ export function getOrderDetails(orderItem: OrderDetails): OrderDetails {
   return {
     id: 123,
     orderStatus: 'packed',
-    shippingAddress: 'string',
+    shippingAddress: 'string'
   };
+}
+
+getOrderStatus(orderItem);
+
+export function getOrderStatus(orderItem: OrderDetails): 'packed' | 'shipped' | 'delivered' | 'cancelled' {
+  return 'packed';
 }

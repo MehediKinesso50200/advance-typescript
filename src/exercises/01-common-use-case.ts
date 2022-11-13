@@ -1,16 +1,6 @@
 import {httpRequest} from '../helpers/type-utils';
 
-export async function getProductList() {
-  const apiResponse: ProductResponse = httpRequest('productList', {});
-  return apiResponse;
-}
-
-export async function getUserList() {
-  const apiResponse: UserResponse = httpRequest('userList', {});
-  return apiResponse;
-}
-
-export interface ProductResponse {
+export interface Product {
   status: string;
   message: string;
   data: {
@@ -27,7 +17,7 @@ export interface ProductResponse {
   }[];
 }
 
-export interface UserResponse {
+export interface User {
   status: string;
   message: string;
   data: {
@@ -36,4 +26,15 @@ export interface UserResponse {
     email: string;
     address: string;
   }[];
+}
+
+
+export async function getProductList() {
+  const apiResponse: Product = httpRequest('productList', {});
+  return apiResponse;
+}
+
+export async function getUserList() {
+  const apiResponse: User = httpRequest('userList', {});
+  return apiResponse;
 }

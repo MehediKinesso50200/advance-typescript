@@ -1,9 +1,8 @@
 import {Product} from '../exercises-solution/01-common-use-case';
-import {httpRequest} from '../helpers/type-utils';
 
 // type ReadOnlyProduct = Readonly<Product>;
 
-const readOnlyProduct: Readonly<Product> = {
+let product: Product = {
   id: 12,
   name: 'T-shirt',
   description: 'Lorem ipsum dolor sit amet...',
@@ -17,8 +16,6 @@ const readOnlyProduct: Readonly<Product> = {
   price: 0
 };
 
-setCurrentProduct(readOnlyProduct)
-
 export async function setCurrentProduct(product: Product) {
   product.description = 'lets not update this item';
   product.details = {size: 'xl', color: '#000000'};
@@ -26,5 +23,3 @@ export async function setCurrentProduct(product: Product) {
   const postDraftProduct = product;
   return postDraftProduct;
 }
-
-// can readonly certain 

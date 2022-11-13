@@ -7,6 +7,7 @@ interface Stack<T> {
   pop(): T | undefined;
   push(item: T): void;
   peek(item: T): T;
+  centerObject():T;
 }
 
 class MyStack<T> implements Stack<T> {
@@ -27,11 +28,15 @@ class MyStack<T> implements Stack<T> {
   peek() {
     return this.store[this.store.length - 1];
   }
+
+  centerObject(): T {
+    return this.length & 1 ? this.store[this.length/2] : this.store[this.length + 1 / 2] 
+  }
 }
 
-const myHouseInstance = new MyStack<Product>();
-myHouseInstance.length;
-myHouseInstance.push({
+const myProductInstance = new MyStack<Product>();
+myProductInstance.length;
+myProductInstance.push({
   id: 10,
   name: 'T-shirt',
   description: 'Lorem ipsum dolor sit amet...',
@@ -44,4 +49,4 @@ myHouseInstance.push({
     color: '#fffff'
   }
 });
-myHouseInstance.peek();
+myProductInstance.peek();

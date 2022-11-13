@@ -1,7 +1,7 @@
 import {Product} from '../exercises-solution/01-common-use-case';
 import {httpRequest} from '../helpers/type-utils';
 
-// type DraftProduct = Partial<Product>;
+//type DraftProduct = Partial<Product>;
 
 const draftProduct: Product = {
   name: 'T-shirt',
@@ -22,4 +22,5 @@ export async function createDraftProduct(product: Product) {
   return postDraftProduct;
 }
 
+// type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
 // nested type will not be partial

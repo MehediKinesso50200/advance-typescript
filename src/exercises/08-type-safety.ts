@@ -7,6 +7,7 @@ interface Order {
   email: string;
 }
 
+
 // const isStripe = (order: StripeOrder | PayPalOrder): order is StripeOrder => {
 //   return 'card' in (order as StripeOrder);
 // };

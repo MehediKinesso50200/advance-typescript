@@ -15,8 +15,8 @@ export interface Product {
   inventory: number,
   price: number,
   details: {
-    size: string; // format with type
-    color: string; // format with type
+    size: string;
+    color: string;
   };
 }
 
