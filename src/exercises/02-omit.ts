@@ -12,7 +12,6 @@ export interface OrderDetails {
     //address: string; // not available
   };
   productDetails: {
-    id: number;
     name: string;
     description: string;
     images: string[];
