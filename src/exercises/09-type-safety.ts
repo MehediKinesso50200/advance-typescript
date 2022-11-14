@@ -1,4 +1,3 @@
-export {};
 interface Order {
   total: number;
   currency: string;

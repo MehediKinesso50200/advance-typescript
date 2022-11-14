@@ -6,6 +6,6 @@ export function createUser() {
     id: id++,
     name: 'Jhon',
     email: 'Jhon@kinesso.com',
-    address: 'abc xyz'
+    address: 'abc XYZ'
   };
 }
