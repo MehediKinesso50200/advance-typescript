@@ -1,4 +1,5 @@
-export class MyStack {
+export {}
+class MyStack {
   store: any[] = [];
 
   get length() {

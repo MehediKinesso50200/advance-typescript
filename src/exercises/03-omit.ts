@@ -1,16 +1,16 @@
 import {httpRequest} from '../helpers/type-utils';
 
-export interface OrderDetails {
+interface Order {
   id: number;
   orderDate: Date;
   shippingAddress: string;
-  productDetails: {
+  product: {
     id: number;
     name: string;
     categories: 'food' | 'cloth' | 'tech';
     // price: number; // next
   };
-  userDetails: {
+  user: {
     id: number;
     name: string;
     // address: string; // not available
@@ -18,11 +18,11 @@ export interface OrderDetails {
   };
 }
 
-export async function getOrderDetails() {
-  const orderDetailsResponse: OrderDetails = httpRequest('orderDetails', {id: 1});
+function getOrderDetails() {
+  const response = httpRequest<Order>('order', {id: 1});
 
-  orderDetailsResponse.userDetails.address;
-  orderDetailsResponse.productDetails.price;
+  response.user.address;
+  response.product.price;
 
-  return orderDetailsResponse;
+  return response;
 }

@@ -1,3 +1,4 @@
+export {};
 interface Order {
   total: number;
   currency: string;
@@ -6,12 +7,11 @@ interface Order {
   email: string;
 }
 
-
 // const isStripe = (order: StripeOrder | PayPalOrder): order is StripeOrder => {
 //   return 'card' in (order as StripeOrder);
 // };
 
-export function processOrder(order: Order) {
+function processOrder(order: Order) {
   if (order.paymentType == 'paypal') {
     order.card;
     order.email;
@@ -21,3 +21,5 @@ export function processOrder(order: Order) {
   }
   return order;
 }
+
+// intersection

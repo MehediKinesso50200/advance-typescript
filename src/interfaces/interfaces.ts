@@ -12,11 +12,11 @@ export interface User {
   email: string;
 }
 
-export interface OrderDetails {
+export interface Order {
   id: number;
   quantity: number;
   orderStatus: 'packed' | 'shipped' | 'delivered' | 'cancelled';
   shippingAddress: string;
-  userDetails: User;
-  productDetails: Product;
+  user: User;
+  product: Product;
 }

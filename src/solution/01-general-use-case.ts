@@ -22,12 +22,16 @@ export interface User {
   }[];
 }
 
-export async function getProductList() {
-  const apiResponse: Product = httpRequest('productList', {});
-  return apiResponse;
-}
+// export async function getProductList() {
+//   const apiResponse: Product = httpRequest('productList', {});
+//   return apiResponse;
+// }
 
 export async function getUserList() {
   const apiResponse: User = httpRequest('userList', {});
   return apiResponse;
 }
+
+// export async function getProductList() {
+//   return httpRequest<Wrapper<Product>>('productList', {});
+// }

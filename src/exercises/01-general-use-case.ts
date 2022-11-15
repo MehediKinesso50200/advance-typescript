@@ -1,6 +1,6 @@
 import {httpRequest} from '../helpers/type-utils';
 
-export interface Product {
+interface Product {
   status: string;
   message: string;
   data: {
@@ -10,8 +10,7 @@ export interface Product {
     price: number;
   }[];
 }
-
-export interface User {
+interface User {
   status: string;
   message: string;
   data: {
