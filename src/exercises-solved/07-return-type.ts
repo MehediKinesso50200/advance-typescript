@@ -1,6 +1,8 @@
+export {};
+
 let id = 0;
 
-export function createUser() {
+function createUser() {
   // process
   return {
     id: id++,

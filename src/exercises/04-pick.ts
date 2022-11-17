@@ -5,7 +5,6 @@ const orderItem: Order = {
   id: 123,
   orderStatus: 'packed',
   shippingAddress: 'address XYZ',
-  quantity: 1,
   product: {
     id: 3,
     name: 'Pants',
@@ -27,7 +26,7 @@ function getOrderDetails(orderItem: Order): Order {
   return {
     id: 123,
     orderStatus: 'packed',
-    shippingAddress: 'string'
+    shippingAddress: 'address XYZ'
   };
 }
 

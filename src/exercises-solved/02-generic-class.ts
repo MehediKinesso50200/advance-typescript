@@ -1,4 +1,5 @@
-export class MyStack {
+export {};
+class MyStack {
   store: any[] = [];
 
   get length() {
@@ -16,24 +17,26 @@ export class MyStack {
   peek() {
     return this.store[this.store.length - 1];
   }
-
-  // centerObject() {
-  //   return this.length & 1 ? this.store[this.length / 2] : this.store[this.length + 1 / 2];
-  // }
 }
 
 const myProductInstance = new MyStack();
-myProductInstance.length;
+
+// Adding a Product to stack
 myProductInstance.push({
   id: 3,
   name: 'T-shirt',
   categories: 'cloth',
   price: 250
 });
-myProductInstance.push({
-  id: 3,
-  name: 'Jhon Doe',
-  address: 'address XYZ',
-  email: 'jhon@kinesso.com'
-});
+
+//Adding a User to the Stack
+// myProductInstance.push({
+//   id: 3,
+//   name: 'Jhon Doe',
+//   address: 'address XYZ',
+//   email: 'jhon@kinesso.com'
+// });
+
+myProductInstance.length;
+
 myProductInstance.peek();

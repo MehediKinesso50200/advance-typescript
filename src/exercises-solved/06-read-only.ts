@@ -9,9 +9,9 @@ let product: Product = {
   price: 0
 };
 
-export async function setCurrentProduct(product: Product) {
+function setCurrentProduct(product: Product) {
   product.price = 30;
   product.name = 'New T-shirt';
-  const postDraftProduct = product;
-  return postDraftProduct;
+
+  return product;
 }

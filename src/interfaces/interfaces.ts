@@ -14,7 +14,6 @@ export interface User {
 
 export interface Order {
   id: number;
-  quantity: number;
   orderStatus: 'packed' | 'shipped' | 'delivered' | 'cancelled';
   shippingAddress: string;
   user: User;

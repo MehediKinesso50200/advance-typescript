@@ -4,14 +4,14 @@ import {Product} from '../interfaces/interfaces';
 // type DraftProduct = Partial<Product>;
 
 const draftProduct: Product = {
+  id: 2,
   name: 'T-shirt',
   categories: 'cloth',
-  id: 2,
   price: 200
 };
 
 createDraftProduct(draftProduct);
-export async function createDraftProduct(product: Product) {
+async function createDraftProduct(product: Product) {
   return httpRequest('postDraftProduct', {product});
 }
 
