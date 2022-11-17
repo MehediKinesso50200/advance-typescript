@@ -11,7 +11,7 @@ const draftProduct: Product = {
 };
 
 createDraftProduct(draftProduct);
-async function createDraftProduct(product: Product) {
+async function createDraftProduct(product: Product) {ß
   return httpRequest('postDraftProduct', {product});
 }
 
