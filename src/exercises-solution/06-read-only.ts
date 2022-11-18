@@ -5,7 +5,7 @@ import {Product} from '../interfaces/interfaces';
 let product: Product = {
   id: 12,
   name: 'T-shirt',
-  categories: 'cloth',
+  category: 'cloth',
   price: 0
 };
 

@@ -6,7 +6,7 @@ interface Order {
   product: {
     id: number;
     name: string;
-    categories: 'food' | 'cloth' | 'tech';
+    category: 'food' | 'cloth' | 'tech';
     // price: number; // next
   };
   user: {
@@ -17,7 +17,7 @@ interface Order {
   };
 }
 
-function getOrderDetails() {
+function getOrder() {
   const response = httpRequest<Order>('order', {id: 1});
 
   response.user.address;

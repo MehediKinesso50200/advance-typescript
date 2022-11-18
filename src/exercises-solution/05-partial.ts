@@ -6,12 +6,12 @@ import {Product} from '../interfaces/interfaces';
 const draftProduct: Product = {
   id: 2,
   name: 'T-shirt',
-  categories: 'cloth',
+  category: 'cloth',
   price: 200
 };
 
 createDraftProduct(draftProduct);
-async function createDraftProduct(product: Product) {ß
+async function createDraftProduct(product: Product) {
   return httpRequest('postDraftProduct', {product});
 }
 

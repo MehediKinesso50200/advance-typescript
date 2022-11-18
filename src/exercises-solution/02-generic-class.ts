@@ -19,24 +19,25 @@ class MyStack {
   }
 }
 
-const myProductInstance = new MyStack();
+const prodInstance = new MyStack();
+
+prodInstance.length;
+prodInstance.peek();
 
 // Adding a Product to stack
-myProductInstance.push({
+prodInstance.push({
   id: 3,
   name: 'T-shirt',
-  categories: 'cloth',
+  category: 'cloth',
   price: 250
 });
 
 //Adding a User to the Stack
-// myProductInstance.push({
+// prodInstance.push({
 //   id: 3,
 //   name: 'Jhon Doe',
 //   address: 'address XYZ',
 //   email: 'jhon@kinesso.com'
 // });
 
-myProductInstance.length;
 
-myProductInstance.peek();

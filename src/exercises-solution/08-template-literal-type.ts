@@ -1,12 +1,12 @@
 export {};
-interface OrderInfo {
+interface Order {
   id: number;
   shipmentPartner: 'LAZ' | 'POS' | 'LALA';
 }
 
-type CombinedId = `${OrderInfo['id']}-${OrderInfo['shipmentPartner']}`;
+type CombinedId = `${Order['id']}${Order['shipmentPartner']}`; // number typeOf shippingPartner
 
-const combinedId: CombinedId = 'abc-LAZ';
+const combinedId: CombinedId = 'xyzLAZ';
 
 type ipgDomain = 'kinesso' | 'matterkind' | 'ipg';
 type ipgEmail = `${string}@${ipgDomain}.com`;

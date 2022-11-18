@@ -8,7 +8,7 @@ const orderItem: Order = {
   product: {
     id: 3,
     name: 'Pants',
-    categories: 'food',
+    category: 'food',
     price: 19
   },
   user: {
@@ -19,9 +19,9 @@ const orderItem: Order = {
   }
 };
 
-getOrderDetails(orderItem);
+getOrder(orderItem);
 
-function getOrderDetails(orderItem: Order): Order {
+function getOrder(orderItem: Order): Order {
   //TODO some data mutation take place
   return {
     id: 123,

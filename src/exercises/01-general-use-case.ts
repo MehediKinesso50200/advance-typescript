@@ -5,8 +5,7 @@ function getProductList() {
 }
 
 function getUserList() {
-  const apiResponse: User = httpRequest('userList', {});
-  return apiResponse;
+  return httpRequest<User>('userList', {});
 }
 
 interface Product {
@@ -15,7 +14,7 @@ interface Product {
   data: {
     id: number;
     name: string;
-    categories: 'food' | 'cloth' | 'tech';
+    category: 'food' | 'cloth' | 'tech';
     price: number;
   }[];
 }
