@@ -3,6 +3,7 @@ import {httpRequest} from '../helpers/type-utils';
 interface Order {
   id: number;
   shippingAddress: string;
+  orderStatus: 'packed' | 'shipped' | 'delivered' | 'cancelled';
   product: {
     id: number;
     name: string;
