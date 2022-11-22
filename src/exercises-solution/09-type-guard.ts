@@ -2,13 +2,25 @@ export {};
 interface Order {
   total: number;
   currency: string;
-  paymentType: 'stripe' | 'paypal';
+}
+
+interface Stripe {
   card: number;
+}
+
+interface PayPal {
   email: string;
 }
 
-function processOrder(order: Order) {
-  if (order.paymentType == 'paypal') {
+type StripeOrder = Stripe & Order;
+type PayPalOrder = PayPal & Order;
+
+const isStripe = (order: StripeOrder | PayPalOrder): order is StripeOrder => {
+  return 'card' in (order as StripeOrder);
+};
+
+function processOrder(order: StripeOrder | PayPalOrder) {
+  if (isStripe(order)) {
     order.card;
     order.email;
   } else {
@@ -19,21 +31,14 @@ function processOrder(order: Order) {
 }
 
 
-// interface Stripe {
-//   card: number;
-// }
 
-// interface PayPal {
-//   email: string;
-// }
 
-// type StripeOrder = Stripe & Order;
-// type PayPalOrder = PayPal & Order;
+
+
+
 
 // intersection
-// const isStripe = (order: StripeOrder | PayPalOrder): order is StripeOrder => {
-//   return 'card' in (order as StripeOrder);
-// };
+
 
 
 

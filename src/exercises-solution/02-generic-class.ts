@@ -1,6 +1,8 @@
+import { Product, User } from "../interfaces/interfaces";
+
 export {};
-class MyStack {
-  store: any[] = [];
+class MyStack<T> {
+  store: T[] = [];
 
   get length() {
     return this.store.length;
@@ -10,16 +12,16 @@ class MyStack {
     return this.store.pop();
   }
 
-  push(item: any) {
+  push(item: T) {
     this.store.push(item);
   }
 
-  peek() {
+  peek(): T {
     return this.store[this.store.length - 1];
   }
 }
 
-const prodInstance = new MyStack();
+const prodInstance = new MyStack<Product>();
 
 prodInstance.length;
 prodInstance.peek();
@@ -32,12 +34,14 @@ prodInstance.push({
   price: 250
 });
 
+const userInstance = new MyStack<User>();
+
 //Adding a User to the Stack
-// prodInstance.push({
-//   id: 3,
-//   name: 'Jhon Doe',
-//   address: 'address XYZ',
-//   email: 'jhon@kinesso.com'
-// });
+userInstance.push({
+  id: 3,
+  name: 'Jhon Doe',
+  address: 'address XYZ',
+  email: 'jhon@kinesso.com'
+});
 
 

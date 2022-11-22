@@ -11,3 +11,5 @@ function createUser() {
     address: 'abc XYZ'
   };
 }
+
+type User = ReturnType<typeof createUser>

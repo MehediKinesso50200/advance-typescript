@@ -1,17 +1,17 @@
 import {httpRequest} from '../helpers/type-utils';
 import {Product} from '../interfaces/interfaces';
 
-// type DraftProduct = Partial<Product>;
+//type DraftProduct = Partial<Product>;
 
-const draftProduct: Product = {
+const draftProduct: Partial<Product> = {
   id: 2,
   name: 'T-shirt',
-  category: 'cloth',
+  category: undefined,
   price: 200
 };
 
 createDraftProduct(draftProduct);
-async function createDraftProduct(product: Product) {
+async function createDraftProduct(product: Partial<Product>) {
   return httpRequest('postDraftProduct', {product});
 }
 

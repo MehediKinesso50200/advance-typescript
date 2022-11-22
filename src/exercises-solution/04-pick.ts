@@ -21,7 +21,7 @@ const orderItem: Order = {
 
 getOrder(orderItem);
 
-function getOrder(orderItem: Order): Order {
+function getOrder(orderItem: Order): Pick<Order, "id" | "orderStatus" | "shippingAddress"> {
   //TODO some data mutation take place
   return {
     id: 123,
@@ -30,8 +30,10 @@ function getOrder(orderItem: Order): Order {
   };
 }
 
+type newType= Pick<Order, "id" | "orderStatus" | "shippingAddress">;
+
 getOrderStatus(orderItem);
 
-function getOrderStatus(orderItem: Order): 'packed' | 'shipped' | 'delivered' | 'cancelled' {
+function getOrderStatus(orderItem: Order): Order["shippingAddress"] {
   return 'packed';
 }
