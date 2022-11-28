@@ -22,6 +22,7 @@ const orderItem: Order = {
 getOrder(orderItem);
 
 function getOrder(orderItem: Order): Order {
+  // user Order as return type by picking item from Order interface
   //TODO some data mutation take place
   return {
     id: 123,
@@ -33,5 +34,6 @@ function getOrder(orderItem: Order): Order {
 getOrderStatus(orderItem);
 
 function getOrderStatus(orderItem: Order): 'packed' | 'shipped' | 'delivered' | 'cancelled' {
+  // reuse Order['orderStatus'] as return type
   return 'packed';
 }

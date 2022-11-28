@@ -32,12 +32,13 @@ prodInstance.push({
   price: 250
 });
 
-//Adding a User to the Stack
-// prodInstance.push({
-//   id: 3,
-//   name: 'Jhon Doe',
-//   address: 'address XYZ',
-//   email: 'jhon@kinesso.com'
-// });
+// Adding a User to the Stack 
+prodInstance.push({
+  id: 3,
+  name: 'Jhon Doe',
+  address: 'address XYZ',
+  email: 'jhon@kinesso.com'
+});
 
+//TODO DONT want this because it will cause stack of mixed item types
 

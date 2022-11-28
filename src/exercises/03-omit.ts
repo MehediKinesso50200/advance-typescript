@@ -1,5 +1,6 @@
 import {httpRequest} from '../helpers/type-utils';
 
+// Problem statement: want to reuse our User and Product interface but need to omit price and address accordingly
 interface Order {
   id: number;
   shippingAddress: string;

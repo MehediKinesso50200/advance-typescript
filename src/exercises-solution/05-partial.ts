@@ -15,4 +15,12 @@ async function createDraftProduct(product: Partial<Product>) {
   return httpRequest('postDraftProduct', {product});
 }
 
-// type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>
+// for making individual property optional rather than default All property
+type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+
+const draftProduct2: PartialBy<Product, 'category'> = {
+  id: 2,
+  name: 'T-shirt',
+  category: undefined,
+  price: 200
+};

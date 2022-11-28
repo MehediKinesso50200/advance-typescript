@@ -20,7 +20,8 @@ const isStripe = (order: StripeOrder | PayPalOrder): order is StripeOrder => {
 };
 
 function processOrder(order: StripeOrder | PayPalOrder) {
-  if (isStripe(order)) {
+  if ('card' in order) {
+    // isStripe(order)
     order.card;
     order.email;
   } else {
@@ -29,16 +30,3 @@ function processOrder(order: StripeOrder | PayPalOrder) {
   }
   return order;
 }
-
-
-
-
-
-
-
-
-// intersection
-
-
-
-
